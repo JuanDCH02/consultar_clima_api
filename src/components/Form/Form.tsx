@@ -44,7 +44,7 @@ export const Form = () => {
                     <option
                         key={country.code}
                         value={country.code}
-                        >{country.name}
+                    >{country.name}
                     </option>
                 ))}
             </select>
