@@ -14,7 +14,8 @@
     font-weight: 400;
 }
 .field ::placeholder{
-    color:white;
+    color: white;
+    opacity: 0.8;
 }
 .submit{
     padding: 1.1rem;
