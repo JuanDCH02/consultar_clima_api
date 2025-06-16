@@ -8,14 +8,11 @@ export type Country = {
 }
 
 export type Weather = {
-    current:{
-        feels_like:number,
-        temp:number
-    },
-    daily:[
-        temp:{
-            max:number,
-            min:number
+    name:string,
+        main:{
+            temp:number,
+            feels_like:number,
+            temp_max:number,
+            temp_min:number,
         }
-    ]
 }

@@ -1,5 +1,5 @@
 import { countries } from "../../data/countries"
-import { Alert } from "../../Alert/Alert"
+import { Alert } from "../Alert/Alert"
 import { useState } from "react"
 
 import type { SearchType } from "../../types"

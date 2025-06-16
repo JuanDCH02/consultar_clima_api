@@ -1,0 +1,30 @@
+.container{
+    background-color: white;
+    color: black;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+
+}
+.current{
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0;
+}
+.feel{
+    margin: .5rem;
+    font-weight: 800;
+    span{
+        font-weight: 400;
+    }
+}
+.maxmin{
+    display: flex;
+    justify-content: space-evenly;
+    p{
+        font-weight: 800;
+    }
+    span{
+        font-weight: 400;
+    }
+}
