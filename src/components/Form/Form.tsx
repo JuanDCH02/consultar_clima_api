@@ -27,12 +27,13 @@ export const Form = ({fetchWeather}: FormProp) => {
     }
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
         e.preventDefault()
-        //vlaido que se hayan cargado los datos
+        //valido que se hayan cargado los datos
         if(Object.values(search).includes('')){
             setAlert('todos los campos son obligatorios')
             return
         }
         fetchWeather(search)
+        {setAlert('')}
     }
 
   return (
