@@ -26,9 +26,7 @@ const intialState = {
         }
 }
 
-
 export default function useWeather ()  {
-
     
     const [weather,setWeather] = useState<Weather>(intialState)
     //state para controlar el spinner
@@ -44,15 +42,13 @@ export default function useWeather ()  {
         setNotfound(false)
         try{
             //hago el primer llamado a la api con el nombre de la ciudad y el codigo pais
-            const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&appid=${appId}`
+            const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&appid=${appId}`
             const {data} = await axios(geoUrl)
-
             //compruebo que hayan datos
             if(!data[0]){
                 setNotfound(true)
                 return 
             }
-
             //del objeto que retorna tomo los valores de latitud y longitud
             const lat = data[0].lat
             const lon = data[0].lon
@@ -75,10 +71,8 @@ export default function useWeather ()  {
             setLoading(false)
         }
     }
-
     //valido que mi state tenga datos
-    const hasWeatherData = useMemo(() => weather.name , [weather] )
-
+    const hasWeatherData = useMemo(() => weather.name , [weather])
     return{
         weather,
         fetchWeather,
